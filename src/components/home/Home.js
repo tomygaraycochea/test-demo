@@ -31,12 +31,16 @@ class Home extends Component {
   render() {
     return (
       <div className="">
-        Home1 esto esta en dev
+        Home
         <div>
           <form onSubmit={this.handleSubmit}>
             <label>
               Name:
-              <input type="text" value={this.state.value} onChange={this.handleChange} />
+              <input
+                type="text"
+                value={this.state.value}
+                onChange={this.handleChange} 
+              />
             </label>
             <input type="submit" value="Submit" />
           </form>
