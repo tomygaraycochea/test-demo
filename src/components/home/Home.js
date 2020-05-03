@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
     return (
       <div className="">
-        Home1
+        Home1 esto esta en dev
         <div>
           <form onSubmit={this.handleSubmit}>
             <label>
