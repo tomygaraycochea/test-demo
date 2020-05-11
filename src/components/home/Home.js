@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Button, Row, Col, Form, Container } from "react-bootstrap";
 
 class Home extends Component {
 
@@ -30,34 +31,41 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="">
+      <Container className="">
         Home
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Name:
-              <input
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                size="lg"
+                placeholder="Enter email"
                 type="text"
                 value={this.state.value}
-                onChange={this.handleChange} 
+                onChange={this.handleChange}
               />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="formBasicRange">
+              <Form.Label>Range</Form.Label>
+              <Form.Control type="range" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </div>
-        <div>
-          <button
-            onClick={this.sendMessage}
-          >
-            Send
-          </button>
-          <button
-            onClick={this.sendRegard}
-          >
-            Regard
-          </button>
-        </div>
-      </div>
+        <Row>
+          <Col>
+            <Button onClick={this.sendMessage}>Send</Button>
+          </Col>
+          <Col>
+            <Button onClick={this.sendRegard}>Regard</Button>
+          </Col>
+        </Row>
+      </Container>
     );  
   }
 }
