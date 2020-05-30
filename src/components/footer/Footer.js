@@ -1,10 +1,16 @@
 import React from "react";
+import "./Footer.css";
+import { Row, Col } from "react-bootstrap";
 
 function Footer() {
   return (
-    <div className="">
-      <div className="">Footer</div>
-    </div>
+    <footer>
+      <Row>
+        <Col>
+          <div className="">Footer</div>
+        </Col>
+      </Row>
+    </footer>
   );
 }
 
